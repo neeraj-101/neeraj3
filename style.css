@@ -1,0 +1,245 @@
+body {
+    background: var(--color-background);
+    font-family: Inter;
+}
+
+body:after {
+    content: "";
+    background: var(--color-top-bg);
+    position: fixed;
+    top: 0;
+    bottom: 70%;
+    right: 0;
+    left: 0;
+    content: " ";
+    z-index: -1;
+}
+
+/* Theme Colors */
+
+.theme_light {
+    --color-background: white;
+    --color-top-bg: hsl(225, 100%, 98%);
+    --color-card-bg: hsl(227, 47%, 96%);
+    --color-text: hsl(228, 12%, 44%);
+    --color-text-1: hsl(230, 17%, 14%);
+    --color-bg-hover: hsl(226, 69%, 94%);
+}
+
+.theme_dark {
+    --color-background: hsl(230, 17%, 14%);
+    --color-top-bg: hsl(232, 19%, 15%);
+    --color-card-bg: hsl(228, 28%, 20%);
+    --color-text: hsl(228, 34%, 66%);
+    --color-text-1: hsl(0, 0%, 100%);
+    --color-bg-hover: hsl(229, 22%, 24%);
+}
+
+/* Top Container */
+
+.top-container {
+    display: flex;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text);
+    justify-content: space-between;
+    width: 68%;
+    margin: 30px auto 0 auto;
+}
+
+.m1 {
+    font-size: 28px;
+    color: var(--color-text-1);
+}
+
+.middle_container {
+    font-size: 26px;
+    color: var(--color-text);
+    width: 68%;
+    margin: 0 auto;
+    font-weight: 700;
+}
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 27px;
+    margin-left: 15px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: hsl(230, 22%, 74%);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px hsl(230, 22%, 74%);
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Style Box first container*/
+
+.row {
+    text-align: center;
+    margin: 35px auto;
+}
+
+.inner {
+    padding: 12px;
+    background: var(--color-card-bg);
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-radius: 0.5rem;
+}
+
+.a {
+    border-top: solid hsl(208, 92%, 53%) 4px;
+}
+
+.b {
+    border-top: solid hsl(203, 89%, 53%) 4px;
+}
+
+.c {
+    border-top: solid hsl(329, 69%, 59%) 4px;
+}
+
+.d {
+    border-top: solid hsl(348, 97%, 39%) 4px;
+}
+
+.username {
+    font-weight: 700;
+    color: var(--color-text);
+    font-size: 13px;
+}
+
+.number {
+    color: var(--color-text-1);
+    font-size: 58px;
+    font-weight: 700;
+    margin-bottom: -13px;
+    margin-top: 12px;
+}
+
+.f {
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 5px;
+}
+
+.count {
+    font-weight: 700;
+    color: hsl(163, 72%, 41%);
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+.count_d {
+    font-weight: 700;
+    color: hsl(356, 69%, 56%);
+    font-size: 13px;
+    padding-top: 15px;
+}
+
+/* Style Box second container*/
+
+.s_inner {
+    padding: 12px;
+    background: var(--color-card-bg);
+    padding-top: 27px;
+    padding-bottom: 2px;
+    border-radius: 0.5rem;
+}
+
+.lower_row {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.upper_row {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.s_numbers {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-text-1);
+}
+
+.inner:hover {
+    background-color: var(--color-bg-hover);
+}
+
+.s_inner:hover {
+    background-color: var(--color-bg-hover);
+}
+
+@media only screen and (max-width: 992px) {
+    .inner {
+        margin-top: 35px;
+    }
+    .s_inner {
+        margin-top: 35px;
+    }
+}
